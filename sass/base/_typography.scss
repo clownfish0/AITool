@@ -1,0 +1,17 @@
+@mixin font400($size:0px , $lineHeight:0px){
+    font-weight: 400;
+    font-size: $size;
+    line-height: $lineHeight;
+}
+
+@mixin font900($size:0px , $lineHeight:0px){
+    font-weight: 900;
+    font-size: $size;
+    line-height: $lineHeight;
+}
+
+@mixin font700($size:0px , $lineHeight:0px){
+    font-weight: 700;
+    font-size: $size;
+    line-height: $lineHeight;
+}

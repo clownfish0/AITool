@@ -1,0 +1,178 @@
+// 全站的樣式
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: $black100;
+    color: $black0;
+}
+.container{
+    max-width: 1296px;
+    margin: 0 auto;
+    
+}
+.sectionAI{
+    width: 100%;
+    background-color: $black0;
+    color: $black100;
+    border-radius: 160px;
+    text-align: center;
+    .container{
+        padding: 160px 0px
+    }
+    h3{ 
+        @include font900(80px,96px); 
+        margin-bottom: 80px;
+    }
+    .search{
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 24px;
+        span{
+            margin-right: 12px;
+            position: absolute;
+            left: 40px;
+            color: $black60;
+        }
+        .enter{
+            padding: 20px 40px 20px 76px;
+            background-color: $black20;
+            border-radius: 16px;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+        }
+        
+    }
+    .filterGroup{
+        display: flex;
+        align-items: center;
+        flex: wrap;
+        margin-bottom: 40px;
+        .filter,.sort{
+            position: relative;
+        }
+        button{
+            padding: 20px 32px 20px 40px;
+            border: 1px solid $black20;
+            border-radius: 16px;
+            background-color: $black0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            @include font400(16px,24px);
+        }
+        .dropdown{
+            width: 240px;
+            background-color: $black0;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);;
+            border-radius: 16px;
+            padding: 20px 0px;
+            text-align: left;
+            position: absolute;
+            z-index: 2;
+            display: none;
+            .dropdownTtitle{
+                @include font700(12px,18px);
+                color: $black60;
+                margin-bottom: 8px;
+                padding: 0px 32px 0px 40px;
+                display: inline-block;
+            }
+            .dropdownList{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                @include font400(16px,24px);
+                li{
+                    padding: 4px 32px 4px 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                li:hover{
+                    background-color: $black20;
+                }
+            }
+            .line{
+                height: 1px;
+                width: 100%;
+                background-color: $black20;
+                margin: 16px 0px;
+            }
+        }
+        a{
+            color: $black60;
+            padding: 8px 16px;
+            background-color: $black0;
+            border-radius: 16px;
+            @include font400(16px,24px);
+            &.active{
+                color: $black100;
+                background-color: $black20;
+                @include font700(16px,24px);
+            }
+        }
+        .paging{
+            display: flex;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            justify-content: center;
+            gap: 8px;
+        }
+    }
+    .AI{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    .card{
+        flex: 1 1 416px;
+        border-radius: 16px;
+        border: 1px solid rgba(242, 242, 242, 1);
+        overflow: hidden;
+    }
+    .picture{
+        width: 100%;
+        overflow: hidden;
+        img{
+            width: 100%;
+            vertical-align: middle;
+            transition: 0.5s;
+        }
+        &:hover img{
+            transform: scale(1.3);
+        }
+    }
+    .text{
+        padding: 20px 32px;
+        border-bottom: 1px solid rgba(242, 242, 242, 1);
+        text-align: left;
+        h3{
+            @include font900(20px,24px);
+            margin-bottom: 12px;
+        }
+        p{
+            @include font400(14px,21px);
+            color: rgba(82, 82, 82, 1);
+            min-height: 42px;
+        }
+    }
+    .space{
+        padding: 20px 32px;
+        display: flex;
+        justify-content: space-between;
+        @include font400(16px,24px);
+    }
+    .type{
+        border-bottom: 1px solid rgba(242, 242, 242, 1);
+    }
+    .type span:first-child{
+        font-weight: 700;
+    }
+    .tag:last-child{
+        cursor: pointer;
+    }
+}

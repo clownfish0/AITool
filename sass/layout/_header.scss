@@ -1,0 +1,23 @@
+// 頁首
+.header{
+    max-width: 1296px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    border-bottom: 1px solid $black0;
+    .logo{
+        max-width: 15.3em;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    ul {
+        display: flex;
+        li{
+            margin-left: 20px;
+        }
+    }
+}
